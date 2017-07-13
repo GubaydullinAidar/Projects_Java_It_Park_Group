@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ru.itpark.onlineBanking.controllers.RefillDebitWindowController">
+    <children>
+        <SplitPane dividerPositions="0.5" layoutX="192.0" layoutY="56.0" prefHeight="400.0" prefWidth="600.0"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label layoutX="61.0" layoutY="60.0" text="Основной счет" AnchorPane.topAnchor="60.0">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="121.0" layoutY="152.0" text="Сумма" AnchorPane.topAnchor="150.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="primaryAmount" layoutX="74.0" layoutY="199.0" AnchorPane.topAnchor="200.0"/>
+                        <Button layoutX="35.0" layoutY="280.0" mnemonicParsing="false"
+                                onAction="#handleRefillPrimaryAccount" text="Пополнение" AnchorPane.leftAnchor="35.0"
+                                AnchorPane.topAnchor="280.0"/>
+                        <Button layoutX="197.0" layoutY="280.0" mnemonicParsing="false"
+                                onAction="#handleDebitPrimaryAccount" text="Списание" AnchorPane.rightAnchor="35.0"
+                                AnchorPane.topAnchor="280.0"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label layoutX="23.0" layoutY="55.0" text="Сберегательный счет" AnchorPane.topAnchor="60.0">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="116.0" layoutY="142.0" text="Сумма" AnchorPane.topAnchor="150.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="savingsAmount" layoutX="69.0" layoutY="199.0" AnchorPane.topAnchor="200.0"/>
+                        <Button layoutX="43.0" layoutY="281.0" mnemonicParsing="false"
+                                onAction="#handleRefillSavingsAccount" text="Пополнение" AnchorPane.leftAnchor="35.0"
+                                AnchorPane.topAnchor="280.0"/>
+                        <Button layoutX="208.0" layoutY="281.0" mnemonicParsing="false"
+                                onAction="#handleDebitSavingsAccount" text="Списание" AnchorPane.rightAnchor="35.0"
+                                AnchorPane.topAnchor="280.0"/>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
